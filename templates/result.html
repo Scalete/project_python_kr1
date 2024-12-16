@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результат перевірки</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container text-center mt-5">
+        <h2>Результат перевірки:</h2>
+        {% if outcome == 'yes' %}
+            <img src="{{ url_for('static', filename='images/yes.png') }}" alt="Yes">
+        {% else %}
+            <img src="{{ url_for('static', filename='images/no.png') }}" alt="No">
+        {% endif %}
+        <br>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">Назад</a>
+    </div>
+</body>
+</html>
